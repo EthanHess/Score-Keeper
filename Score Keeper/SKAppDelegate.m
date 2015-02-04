@@ -7,6 +7,9 @@
 //
 
 #import "SKAppDelegate.h"
+#import "ScoreViewController.h"
+
+
 
 @implementation SKAppDelegate
 
@@ -15,6 +18,13 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    ScoreViewController *scoreViewController = [[ScoreViewController alloc]init];
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:scoreViewController];
+    
+    self.window.rootViewController = navigationController;
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
