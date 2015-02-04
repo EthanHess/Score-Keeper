@@ -18,7 +18,8 @@
     [super viewDidLoad];
     
     UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height)];
-    scrollView.tintColor = [UIColor redColor];    [self.view addSubview:scrollView];
+    scrollView.tintColor = [UIColor redColor];
+    [self.view addSubview:scrollView];
     self.scrollView = scrollView;
     self.title = @"Score Keeper";
     self.scoreLabels = [NSMutableArray new];
@@ -39,6 +40,7 @@
     
     UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, (index +1) * heightOfScoreBlock, self.view.frame.size.width, heightOfScoreBlock)];
     
+    
     UITextField *name = [[UITextField alloc] initWithFrame:CGRectMake(32, 8, 128, 64)];
     name.placeholder = @"name";
     
@@ -51,7 +53,7 @@
     plusMinus.tag = index;
     plusMinus.maximumValue = 100;
     [plusMinus addTarget:self action:@selector(scoreStepperChanged:) forControlEvents:UIControlEventValueChanged];
-    [view addSubview:plusMinus];
+    
     
     [view addSubview:name];
     [view addSubview:score];
