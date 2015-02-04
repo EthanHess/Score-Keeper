@@ -18,9 +18,8 @@
     [super viewDidLoad];
     
     UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height)];
-    [self.view addSubview:scrollView];
+    scrollView.tintColor = [UIColor redColor];    [self.view addSubview:scrollView];
     self.scrollView = scrollView;
-    
     self.title = @"Score Keeper";
     self.scoreLabels = [NSMutableArray new];
     
@@ -43,6 +42,7 @@
     name.placeholder = @"name";
     
     UILabel *score = [[UILabel alloc] initWithFrame:CGRectMake(135, 16, 50, 50)];
+    [self.scoreLabels addObject:score];
     score.text = @"0";
     
     UIStepper *plusMinus = [[UIStepper alloc] initWithFrame:CGRectMake(195, 24, 0, 0)];
