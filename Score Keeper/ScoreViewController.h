@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ScoreViewController : UIViewController
+@interface ScoreViewController : UIViewController <UITextFieldDelegate>
 
+// Property of scrollView gets instantiated in the m file.
 @property (strong, nonatomic) UIScrollView *scrollView;
 
 @property (strong, nonatomic) NSMutableArray *scoreLabels;
